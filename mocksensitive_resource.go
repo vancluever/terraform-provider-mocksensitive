@@ -33,6 +33,14 @@ func resourceMockSensitiveResource() *schema.Resource {
 				Required:  true,
 				Sensitive: true,
 			},
+			"sensitive_list": {
+				Type:      schema.TypeList,
+				Required:  true,
+				Sensitive: true,
+				Elem: &schema.Schema{
+					Type: schema.TypeString,
+				},
+			},
 			"sensitive_map": {
 				Type:      schema.TypeMap,
 				Required:  true,
